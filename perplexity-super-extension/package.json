@@ -1,0 +1,28 @@
+{
+  "name": "perplexity-super-extension",
+  "displayName": "Perplexity Super-Extension",
+  "description": "An enhanced Perplexity chat experience in VS Code with MCP.",
+  "version": "0.0.1",
+  "publisher": "vsvibe",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "AI"
+  ],
+  "activationEvents": [
+    "onCommand:perplexity-super-extension.startChat"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "perplexity-super-extension.startChat",
+        "title": "Perplexity: Start Super Chat"
+      }
+    ]
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

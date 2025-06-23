@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src ${webview.cspSource}; script-src 'nonce-${nonce}'; connect-src http://localhost:8080;">
+    <link href="${styleUri}" rel="stylesheet">
+    <title>Perplexity Super Chat</title>
+</head>
+<body>
+    <div id="app-container">
+        <div class="controls">
+            <div class="control-group">
+                <label for="font-size-select">Font:</label>
+                <select id="font-size-select">
+                    <option value="12px">12px</option>
+                    <option value="14px">14px</option>
+                    <option value="16px">16px</option>
+                    <option value="18px">18px</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="theme-select">Theme:</label>
+                <select id="theme-select">
+                    <option value="dark">Dark</option>
+                    <option value="light">Light</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="tone-select">Tone:</label>
+                <select id="tone-select">
+                    <option value="friendly">Friendly</option>
+                    <option value="formal">Formal</option>
+                    <option value="casual">Casual</option>
+                </select>
+            </div>
+        </div>
+        <div id="intent-overlay" class="hidden"></div>
+        <div id="chat-window"></div>
+        <div class="chat-input-container">
+            <textarea id="chat-input" placeholder="Ask Perplexity... (e.g., 'Summarize my README.md')" rows="1"></textarea>
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <!-- initial-config -->
+    <script nonce="${nonce}" src="${scriptUri}"></script>
+</body>
+</html>
